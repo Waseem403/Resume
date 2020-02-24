@@ -4,6 +4,11 @@ const express=require('express')
 const app=express()
 
 
+app.get("/",(req,res)=>{
+    res.send("helo world...")
+})
+
+
 //for the production environment.Tesaeting snsifnego;
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
