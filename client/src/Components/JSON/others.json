@@ -1,0 +1,58 @@
+[
+    {
+      "type": "NPM", 
+      "level": 90,
+      "color": {
+        "bar": "#fb8c00",
+        "title": {
+          "background": "#fb8c00",
+          "text": "white"
+        }
+      }
+    },
+    {
+      "type": "GIT,Github", 
+      "level": 85,
+      "color": {
+        "bar": "#fb8c00",
+        "title": {
+          "background": "#fb8c00",
+          "text": "white"
+        }
+      }
+  },
+  {
+    "type": "Postman", 
+    "level": 90,
+    "color": {
+      "bar": "#fb8c00",
+      "title": {
+        "background": "#fb8c00",
+        "text": "white"
+      }
+    }
+  },
+  {
+    "type": "React dev tool", 
+    "level": 85,
+    "color": {
+      "bar": "#fb8c00",
+      "title": {
+        "background": "#fb8c00",
+        "text": "white"
+      }
+    }
+},
+{
+    "type": "Redux dev tool", 
+    "level": 85,
+    "color": {
+      "bar": "#fb8c00",
+      "title": {
+        "background": "#fb8c00",
+        "text": "white"
+      }
+    }
+}
+  ]
+  

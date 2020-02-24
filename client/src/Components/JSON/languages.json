@@ -1,0 +1,69 @@
+[
+    {
+      "type": "Js,Jquery", 
+      "level": 90,
+      "color": {
+        "bar": "#33691e",
+        "title": {
+          "background": "#33691e",
+          "text": "white"
+        }
+      }
+    },
+    {
+      "type": "React js", 
+      "level": 85,
+      "color": {
+        "bar": "#33691e",
+        "title": {
+          "background": "#33691e",
+          "text": "white"
+        }
+      }
+  },
+  {
+    "type": "Node js", 
+    "level": 85,
+    "color": {
+      "bar": "#33691e",
+      "title": {
+        "background": "#33691e",
+        "text": "white"
+      }
+    }
+  },
+  {
+    "type": "Express js", 
+    "level": 85,
+    "color": {
+      "bar": "#33691e",
+      "title": {
+        "background": "#33691e",
+        "text": "white"
+      }
+    }
+  },
+  {
+    "type": "json js", 
+    "level": 85,
+    "color": {
+      "bar": "#33691e",
+      "title": {
+        "background": "#33691e",
+        "text": "white"
+      }
+    }
+  },
+  {
+    "type": "xml js", 
+    "level": 85,
+    "color": {
+      "bar": "#33691e",
+      "title": {
+        "background": "#33691e",
+        "text": "white"
+      }
+    }
+  }
+  ]
+  
