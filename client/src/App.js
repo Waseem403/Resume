@@ -190,7 +190,7 @@ function App() {
                   align="right"
                   href="#aboutme"
                 >
-                  About mea
+                  About me
                 </Button>
                 <Button
                   color="inherit"
