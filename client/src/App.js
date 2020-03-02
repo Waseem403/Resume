@@ -22,7 +22,7 @@ import Languages from "./Components/Language";
 import Hobbies from "./Components/Hobbies";
 import Github from "./Components/Github";
 import Contactus from "./Components/Contactus"
-
+import Footer from "./Components/Footer"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -120,6 +120,15 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
+  },
+  Footer:{
+    margin: "auto",
+    backgroundColor: "#212121",
+    color: "#fff",
+    display: "flex",
+    flexDirection: "column",
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2)
   },
   large: {
     width: theme.spacing(35),
@@ -297,6 +306,11 @@ function App() {
           <section id="contact" className={classes.Contactus}>
           <Contactus />
         </section>
+
+         {/*Footer us*/}
+          <section id="Footer" className={classes.Footer}>
+           <Footer/>
+          </section>
       </div>
     </React.Fragment>
   );

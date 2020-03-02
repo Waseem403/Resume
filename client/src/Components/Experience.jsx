@@ -59,7 +59,7 @@ export default function Experience() {
             Full stack development diploma course
           </h4>
            <p>
-           I had completed my B.tech with 62% from jntua ananthapur university
+            I had completed my full stack development course from NIIT(dadar).
            </p>
           <p>
             <ul>
@@ -92,7 +92,7 @@ export default function Experience() {
             Bheema institute of technology and science
           </h2>
           <h4 className="vertical-timeline-element-subtitle">B.Tech</h4>
-          <p>User Experience, Visual Design</p>
+          <p>I had completed my graduation in the year 2016 with 62%</p>
             <ul>
               <li>
                 <strong>Degree</strong> : B.Ed
@@ -107,7 +107,7 @@ export default function Experience() {
                 <strong>Branch/specialization</strong> : Electronics & Communication Engineering
               </li>
               <li>
-                <strong>Percentage %</strong> : 61.96%
+                <strong>Percentage %</strong> : 62%
               </li>
               <li>
                 <strong>Passout Year </strong> : 2016
@@ -126,7 +126,7 @@ export default function Experience() {
           <h4 className="vertical-timeline-element-subtitle">
             Higher secondary school certificate
           </h4>
-          <p>User Experience, Visual Design</p>
+          <p>I had completed my intermediate in the year 2012 with 77%</p>
           <ul>
               <li>
                 <strong>Degree</strong> : Higher secondary school certificate
@@ -160,7 +160,7 @@ export default function Experience() {
           <h4 className="vertical-timeline-element-subtitle">
             Secondary school certificate
           </h4>
-          <p>Strategy, Social Media</p>
+          <p>SI had completed my SSC in the year 2010 with 56%</p>
           <ul>
               <li>
                 <strong>Degree</strong> : Secondary school certificate

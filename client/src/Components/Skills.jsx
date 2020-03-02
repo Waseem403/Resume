@@ -135,7 +135,7 @@ function Skills() {
                   Front-End 
                 </Typography>
               <Progress 
-              progress={75} 
+              progress={90} 
               reduction={0}
               strokeWidth={1}
               hideBall={true}
@@ -180,7 +180,7 @@ function Skills() {
                   Server-Side
                 </Typography>
               <Progress 
-              progress={75} 
+              progress={80} 
               reduction={0}
               strokeWidth={1}
               hideBall={true}
@@ -224,7 +224,7 @@ function Skills() {
                   IAS Platform
                 </Typography>
               <Progress 
-              progress={75} 
+              progress={70} 
               reduction={0}
               strokeWidth={1}
               hideBall={true}
@@ -268,7 +268,7 @@ function Skills() {
                   Dev Tools
                 </Typography>
               <Progress 
-              progress={75} 
+              progress={85} 
               reduction={0}
               strokeWidth={1}
               hideBall={true}

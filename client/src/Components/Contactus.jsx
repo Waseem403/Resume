@@ -10,6 +10,9 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { useState } from "react";
 import MuiPhoneNumber from "material-ui-phone-number";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import EmailIcon from '@material-ui/icons/Email';
 
 const useStyles = makeStyles(theme => ({
   margin: {
@@ -20,7 +23,12 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(5)
   },
   messagebtn: {
-    textTransform: "capitalize"
+    textTransform: "capitalize",
+    letterSpacing:'2px'
+  },
+  links:{
+    textDecoration:"none",
+    lineHeight:2,
   }
 }));
 
@@ -71,14 +79,15 @@ export default function Aboutme() {
               Contact Details
             </Typography>
             <address>
+             <h3><LocationOnIcon/> Address : </h3> 
               <p>R.no:405/28-b,Vindeshwari Chs,</p>
               <p>Nehru Nagar,</p>
                 <p>90 Feet Road, </p>
                 <p>Sion(W)</p>
                 <p>Mumbai-400017</p>
             </address>
-            <p><storng> +91 9966599303 or +91 8919175455</storng></p>
-            <p> <a href="mailto:b.waseem.403@gmail.com">b.waseem.403@gmail.com</a></p>
+            <p><PhoneAndroidIcon/> <a href="tel:+91 9966599303" className={classes.links}>+91 9966599303</a> or <a href="tel:+91 8919175455" className={classes.links}>+91 8919175455</a></p>
+            <p> <EmailIcon/> <a href="mailto:b.waseem.403@gmail.com" className={classes.links}>b.waseem.403@gmail.com</a></p>
           </Grid>
 
           <Grid item xs={12} sm={12} md={8} lg={8}>
@@ -133,6 +142,7 @@ export default function Aboutme() {
                     type="submit"
                     color="primary"
                     disableElevation
+                    className={classes.messagebtn}
                   >
                     {" "}
                     send message{" "}

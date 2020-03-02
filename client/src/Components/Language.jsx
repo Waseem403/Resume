@@ -18,6 +18,7 @@ import FolderIcon from "@material-ui/icons/Folder";
 import DeleteIcon from "@material-ui/icons/Delete";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CancelIcon from '@material-ui/icons/Cancel';
+import Hidden from '@material-ui/core/Hidden';
 
 
 const useStyles = makeStyles(theme => ({
@@ -68,7 +69,7 @@ export default function Language() {
                 <ListItem>
                   <ListItemText
                     primary="ENGLISH"
-                    secondary={"Professional working proficiency"}
+                    secondary={<Hidden smDown>Professional working proficiency</Hidden>}
                   />
                   <ListItemSecondaryAction>
                     <IconButton edge="end" size="small" aria-label="delete">
@@ -152,7 +153,7 @@ export default function Language() {
                 <ListItem>
                   <ListItemText
                     primary="KOREAN"
-                    secondary={"Elementary proficiency"}
+                    secondary={<Hidden smDown>Elementary proficiency</Hidden> }
                   />
                   <ListItemSecondaryAction>
                     <IconButton edge="end" size="small" aria-label="delete">
