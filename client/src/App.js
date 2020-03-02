@@ -21,6 +21,8 @@ import Experience from "./Components/Experience";
 import Languages from "./Components/Language";
 import Hobbies from "./Components/Hobbies";
 import Github from "./Components/Github";
+import Contactus from "./Components/Contactus"
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -86,6 +88,15 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
   },
+  Languages:{
+    margin: "auto",
+    backgroundColor: theme.palette.white,
+    color: "#212121",
+    display: "flex",
+    flexDirection: "column",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8)
+  },
   githubp: {
     margin: "auto",
     backgroundColor: "#24292e",
@@ -101,7 +112,15 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
   },
-
+  Contactus:{
+    margin: "auto",
+    backgroundColor: "#f2f2f2",
+    color: "#212121",
+    display: "flex",
+    flexDirection: "column",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8)
+  },
   large: {
     width: theme.spacing(35),
     height: theme.spacing(35),
@@ -195,6 +214,13 @@ function App() {
                 <Button
                   color="inherit"
                   className={classes.navbtn}
+                  href="#experience"
+                >
+                  exp & edu
+                </Button>
+                <Button
+                  color="inherit"
+                  className={classes.navbtn}
                   href="#skills"
                 >
                   skills
@@ -202,9 +228,16 @@ function App() {
                 <Button
                   color="inherit"
                   className={classes.navbtn}
-                  href="#experience"
+                  href="#github"
                 >
-                  exp & edu
+                  projects
+                </Button>
+                <Button
+                  color="inherit"
+                  className={classes.navbtn}
+                  href="#languages"
+                >
+                  languages
                 </Button>
                 <Button
                   color="inherit"
@@ -216,16 +249,9 @@ function App() {
                 <Button
                   color="inherit"
                   className={classes.navbtn}
-                  href="#languages"
+                  href="#contact"
                 >
-                  hobbies
-                </Button>
-                <Button
-                  color="inherit"
-                  className={classes.navbtn}
-                  href="#github"
-                >
-                  projects
+                  contact us
                 </Button>
               </Toolbar>
             </Container>
@@ -257,13 +283,19 @@ function App() {
 
         
         {/*languages know*/}
-        <section id="languages" className={classes.hobbies}>
+        <section id="languages" className={classes.Languages}>
           <Languages />
         </section>
 
         {/*Hobbies*/}
         <section id="hobbies" className={classes.hobbies}>
           <Hobbies />
+        </section>
+
+
+          {/*Contact us*/}
+          <section id="contact" className={classes.Contactus}>
+          <Contactus />
         </section>
       </div>
     </React.Fragment>
