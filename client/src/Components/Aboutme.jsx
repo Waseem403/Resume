@@ -85,7 +85,8 @@ export default function Aboutme() {
               aria-label="delete"
               className={classes.margin}
               size="large"
-              href="https://api.whatsapp.com/send?phone=9966599303" method="get" target="_blank"
+              href="https://api.whatsapp.com/send?phone=9966599303&text=Hi"  target="_blank"
+              
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
             </IconButton>
@@ -148,7 +149,7 @@ export default function Aboutme() {
               aria-label="delete"
               className={classes.margin}
               size="large"
-              href="https://api.whatsapp.com/send?phone=9966599303" method="get" target="_blank"
+              href="https://api.whatsapp.com/send?phone=9966599303&text=Hi"  target="_blank"
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
             </IconButton>

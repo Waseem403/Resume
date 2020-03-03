@@ -8,12 +8,21 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Backdrop from "@material-ui/core/Backdrop";
+import Hidden from '@material-ui/core/Hidden';
 
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Loader from "react-loader-spinner";
-
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import WorkIcon from '@material-ui/icons/Work';
 import IconButton from "@material-ui/core/IconButton";
+import LanguageIcon from '@material-ui/icons/Language';
+import CodeIcon from '@material-ui/icons/Code';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import PermDataSettingIcon from '@material-ui/icons/PermDataSetting';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import StarsIcon from '@material-ui/icons/Stars';
+
 
 import Aboutme from "./Components/Aboutme";
 import Skills from "./Components/Skills"
@@ -147,7 +156,6 @@ function App() {
   const [Errors, SetErrors] = useState([]);
 
   useEffect(() => {
-    console.log("running");
     SetLoading(true);
     fetch(
       `https://api.github.com/users/waseem403/repos?per_page=100&sort=created: asc&client_id=26c196bacea7db10cf48&client_secret=0885cb690e07d2a93a6afb0891fb552fd9f7aa53`
@@ -156,14 +164,12 @@ function App() {
         return res.json();
       })
       .then(data => {
-        console.log(data);
         SetLoading(false);
         SetRepos(data);
       })
       .catch(err => {
         SetLoading(false);
         SetErrors(err);
-        console.log(err);
       });
   }, []);
 
@@ -209,7 +215,7 @@ function App() {
                     className={classes.navbtn}
                     href="#aboutme"
                   >
-                    Waseem Basha
+                   <Hidden smDown> Waseem Basha</Hidden>
                   </Button>
                 </Typography>
                 <Button
@@ -218,49 +224,56 @@ function App() {
                   align="right"
                   href="#aboutme"
                 >
-                  About me
+                <Hidden smDown>About me</Hidden>  
+                <Hidden mdUp><AccountCircleIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#experience"
                 >
-                  exp & edu
+               <Hidden smDown>edu & exp</Hidden>  
+                <Hidden mdUp><WorkIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#skills"
                 >
-                  skills
+                    <Hidden smDown>Skills</Hidden>  
+                <Hidden mdUp><PermDataSettingIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#github"
                 >
-                  projects
+                  <Hidden smDown>projects</Hidden>  
+                <Hidden mdUp><AccountTreeIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#languages"
                 >
-                  languages
+                   <Hidden smDown>languages</Hidden>  
+                <Hidden mdUp><LanguageIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#hobbies"
                 >
-                  hobbies
+                <Hidden smDown>hobbies</Hidden>  
+                <Hidden mdUp><StarsIcon/></Hidden>  
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#contact"
                 >
-                  contact us
+                  <Hidden smDown>contact</Hidden>  
+                <Hidden mdUp><ContactMailIcon/></Hidden>  
                 </Button>
               </Toolbar>
             </Container>
