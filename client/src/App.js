@@ -1,45 +1,66 @@
 import React, { useEffect, useState } from "react";
+import clsx from "clsx";
 
 import ScrollspyNav from "react-scrollspy-nav";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Backdrop from "@material-ui/core/Backdrop";
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from "@material-ui/core/Hidden";
 
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Loader from "react-loader-spinner";
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import WorkIcon from '@material-ui/icons/Work';
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import WorkIcon from "@material-ui/icons/Work";
 import IconButton from "@material-ui/core/IconButton";
-import LanguageIcon from '@material-ui/icons/Language';
-import CodeIcon from '@material-ui/icons/Code';
-import AccountTreeIcon from '@material-ui/icons/AccountTree';
-import PermDataSettingIcon from '@material-ui/icons/PermDataSetting';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
-import StarsIcon from '@material-ui/icons/Stars';
+import LanguageIcon from "@material-ui/icons/Language";
+import CodeIcon from "@material-ui/icons/Code";
+import AccountTreeIcon from "@material-ui/icons/AccountTree";
+import PermDataSettingIcon from "@material-ui/icons/PermDataSetting";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+import StarsIcon from "@material-ui/icons/Stars";
 
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import FolderIcon from "@material-ui/icons/Folder";
+import RestoreIcon from "@material-ui/icons/Restore";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+
+import Drawer from "@material-ui/core/Drawer";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
+import Divider from "@material-ui/core/Divider";
 
 import Aboutme from "./Components/Aboutme";
-import Skills from "./Components/Skills"
+import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Languages from "./Components/Language";
 import Hobbies from "./Components/Hobbies";
 import Github from "./Components/Github";
-import Contactus from "./Components/Contactus"
-import Footer from "./Components/Footer"
+import Contactus from "./Components/Contactus";
+import Footer from "./Components/Footer";
+
+const drawerWidth = 80;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    backgroundColor: "rgb(233, 30, 99)",
-    color: "white",
-    transition: "0.3s",
-    boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)"
+    backgroundColor: "#f50057",
+    color: "#fff"
   },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1
@@ -97,7 +118,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
   },
-  Languages:{
+  Languages: {
     margin: "auto",
     backgroundColor: theme.palette.white,
     color: "#212121",
@@ -121,7 +142,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
   },
-  Contactus:{
+  Contactus: {
     margin: "auto",
     backgroundColor: "#f2f2f2",
     color: "#212121",
@@ -130,7 +151,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
   },
-  Footer:{
+  Footer: {
     margin: "auto",
     backgroundColor: "#212121",
     color: "#fff",
@@ -146,14 +167,83 @@ const useStyles = makeStyles(theme => ({
   },
   linkdin: {
     color: "indigo"
+  },
+
+  root: {
+    display: "flex"
+  },
+  appBar: {
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    })
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen
+    })
+  },
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  hide: {
+    display: "none"
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0
+  },
+  drawerPaper: {
+    width: drawerWidth
+  },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: "0 8px",
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end"
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    }),
+    marginLeft: -drawerWidth
+  },
+  contentShift: {
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen
+    }),
+    marginLeft: 0
+  },
+  iconcenter: {
+    paddingLeft: theme.spacing(2.4),
+    alignItems: "center"
   }
 }));
 
 function App() {
   const classes = useStyles();
+  const theme = useTheme();
   const [Repos, SetRepos] = useState([]);
   const [Loading, SetLoading] = useState(false);
   const [Errors, SetErrors] = useState([]);
+
+  const [open, setOpen] = React.useState(false);
+
+  function handleDrawerOpen() {
+    setOpen(true);
+  }
+
+  function handleDrawerClose() {
+    setOpen(false);
+  }
 
   useEffect(() => {
     SetLoading(true);
@@ -206,78 +296,177 @@ function App() {
         offset={-50}
       >
         <div>
-          <AppBar position="fixed" dense className={classes.root}>
-            <Container>
-              <Toolbar>
-                <Typography variant="h6" className={classes.title}>
+          <Hidden smDown>
+            <AppBar position="fixed" dense className={classes.root}>
+              <Container>
+                <Toolbar>
+                  <Typography variant="h6" className={classes.title}>
+                    <Button
+                      color="inherit"
+                      className={classes.navbtn}
+                      href="#aboutme"
+                    >
+                      Waseem Basha
+                    </Button>
+                  </Typography>
                   <Button
                     color="inherit"
                     className={classes.navbtn}
+                    align="right"
                     href="#aboutme"
                   >
-                   <Hidden smDown> Waseem Basha</Hidden>
+                    About me
                   </Button>
-                </Typography>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#experience"
+                  >
+                    <Hidden smDown>edu & exp</Hidden>
+                    <Hidden mdUp>
+                      <WorkIcon />
+                    </Hidden>
+                  </Button>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#skills"
+                  >
+                    Skills
+                  </Button>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#github"
+                  >
+                    projects
+                  </Button>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#languages"
+                  >
+                    languages
+                  </Button>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#hobbies"
+                  >
+                    hobbies
+                  </Button>
+                  <Button
+                    color="inherit"
+                    className={classes.navbtn}
+                    href="#contact"
+                  >
+                    contact
+                  </Button>
+                </Toolbar>
+              </Container>
+            </AppBar>
+          </Hidden>
+
+          <Hidden mdUp>
+            <div>
+              <CssBaseline />
+              <AppBar
+                position="fixed"
+                className={clsx(classes.appBar, {
+                  [classes.appBarShift]: open
+                })}
+                color="inherit"
+              >
+                <Toolbar>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerOpen}
+                    edge="start"
+                    className={clsx(classes.menuButton, open && classes.hide)}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  Waseem Basha
+                </Toolbar>
+              </AppBar>
+              <Drawer
+                className={classes.drawer}
+                variant="persistent"
+                anchor="left"
+                open={open}
+                classes={{
+                  paper: classes.drawerPaper
+                }}
+              >
+                <div className={classes.drawerHeader}>
+                  <IconButton onClick={handleDrawerClose}>
+                    {theme.direction === "ltr" ? (
+                      <ChevronLeftIcon />
+                    ) : (
+                      <ChevronRightIcon />
+                    )}
+                  </IconButton>
+                </div>
+
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   align="right"
                   href="#aboutme"
                 >
-                <Hidden smDown>About me</Hidden>  
-                <Hidden mdUp><AccountCircleIcon/></Hidden>  
+                <AccountCircleIcon fontSize="large"/>
+                
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#experience"
                 >
-               <Hidden smDown>edu & exp</Hidden>  
-                <Hidden mdUp><WorkIcon/></Hidden>  
+                <WorkIcon fontSize="large"/> 
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#skills"
                 >
-                    <Hidden smDown>Skills</Hidden>  
-                <Hidden mdUp><PermDataSettingIcon/></Hidden>  
+                  <DeveloperModeIcon fontSize="large"/>
+              <Divider light/>
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#github"
                 >
-                  <Hidden smDown>projects</Hidden>  
-                <Hidden mdUp><AccountTreeIcon/></Hidden>  
+                <GitHubIcon fontSize="large"/>
+             
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#languages"
                 >
-                   <Hidden smDown>languages</Hidden>  
-                <Hidden mdUp><LanguageIcon/></Hidden>  
+                   <LanguageIcon fontSize="large"/>
+        
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#hobbies"
                 >
-                <Hidden smDown>hobbies</Hidden>  
-                <Hidden mdUp><StarsIcon/></Hidden>  
+                 <FavoriteIcon fontSize="large"/>
                 </Button>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#contact"
                 >
-                  <Hidden smDown>contact</Hidden>  
-                <Hidden mdUp><ContactMailIcon/></Hidden>  
+              <LocationOnIcon fontSize="large"/>
+            
                 </Button>
-              </Toolbar>
-            </Container>
-          </AppBar>
+              </Drawer>
+            </div>
+          </Hidden>
         </div>
       </ScrollspyNav>
 
@@ -288,14 +477,14 @@ function App() {
           <Aboutme />
         </section>
 
-          {/*experience details */}
-          <section id="experience" className={classes.experience}>
-          <Experience/>
+        {/*experience details */}
+        <section id="experience" className={classes.experience}>
+          <Experience />
         </section>
 
         {/*technical skills*/}
         <section id="skills" className={classes.skills}>
-         <Skills/>
+          <Skills />
         </section>
 
         {/*github repository*/}
@@ -303,7 +492,6 @@ function App() {
           {GithubData}
         </section>
 
-        
         {/*languages know*/}
         <section id="languages" className={classes.Languages}>
           <Languages />
@@ -314,16 +502,10 @@ function App() {
           <Hobbies />
         </section>
 
-
-          {/*Contact us*/}
-          <section id="contact" className={classes.Contactus}>
+        {/*Contact us*/}
+        <section id="contact" className={classes.Contactus}>
           <Contactus />
         </section>
-
-         {/*Footer us*/}
-          <section id="Footer" className={classes.Footer}>
-           <Footer/>
-          </section>
       </div>
     </React.Fragment>
   );

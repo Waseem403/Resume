@@ -39,7 +39,7 @@ export default function Aboutme() {
   return (
     <React.Fragment>
       <Hidden mdDown>
-      <Container>
+      <Container >
         <Typography variant="h4" align="center" gutterBottom>
           ABOUT ME
         </Typography>
@@ -85,7 +85,7 @@ export default function Aboutme() {
               aria-label="delete"
               className={classes.margin}
               size="large"
-              href="https://api.whatsapp.com/send?phone=9966599303&text=Hi"  target="_blank"
+              href="https://wa.me/9966599303/?text=urlencodedtext"  target="_blank"
               
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
@@ -134,7 +134,7 @@ export default function Aboutme() {
 
 
       <Hidden lgUp>
-      <Container>
+      <Container maxWidth="md">
         <Typography variant="h4" align="center" gutterBottom>
           ABOUT ME
         </Typography>
@@ -149,7 +149,7 @@ export default function Aboutme() {
               aria-label="delete"
               className={classes.margin}
               size="large"
-              href="https://api.whatsapp.com/send?phone=9966599303&text=Hi"  target="_blank"
+              href="https://wa.me/9966599303/?text=urlencodedtext"  target="_blank"
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
             </IconButton>
