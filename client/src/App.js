@@ -11,23 +11,15 @@ import Container from "@material-ui/core/Container";
 import Backdrop from "@material-ui/core/Backdrop";
 import Hidden from "@material-ui/core/Hidden";
 
-import Avatar from "@material-ui/core/Avatar";
-import Grid from "@material-ui/core/Grid";
+
 import Loader from "react-loader-spinner";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import WorkIcon from "@material-ui/icons/Work";
 import IconButton from "@material-ui/core/IconButton";
 import LanguageIcon from "@material-ui/icons/Language";
-import CodeIcon from "@material-ui/icons/Code";
-import AccountTreeIcon from "@material-ui/icons/AccountTree";
-import PermDataSettingIcon from "@material-ui/icons/PermDataSetting";
-import ContactMailIcon from "@material-ui/icons/ContactMail";
-import StarsIcon from "@material-ui/icons/Stars";
 
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import FolderIcon from "@material-ui/icons/Folder";
-import RestoreIcon from "@material-ui/icons/Restore";
+
+
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
@@ -38,13 +30,10 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import Divider from "@material-ui/core/Divider";
+import Snackbar from '@material-ui/core/Snackbar';
+
+
 
 import Aboutme from "./Components/Aboutme";
 import Skills from "./Components/Skills";
@@ -59,8 +48,7 @@ const drawerWidth = 80;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: "#f50057",
-    color: "#fff"
+    color: "#212121"
   },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1
@@ -153,8 +141,8 @@ const useStyles = makeStyles(theme => ({
   },
   Footer: {
     margin: "auto",
-    backgroundColor: "#212121",
-    color: "#fff",
+    backgroundColor: "#e0e0e0",
+    color: "#212121",
     display: "flex",
     flexDirection: "column",
     paddingTop: theme.spacing(2),
@@ -169,9 +157,7 @@ const useStyles = makeStyles(theme => ({
     color: "indigo"
   },
 
-  root: {
-    display: "flex"
-  },
+
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -194,7 +180,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawer: {
     width: drawerWidth,
-    flexShrink: 0
+    flexShrink: 0,
   },
   drawerPaper: {
     width: drawerWidth
@@ -233,8 +219,7 @@ function App() {
   const theme = useTheme();
   const [Repos, SetRepos] = useState([]);
   const [Loading, SetLoading] = useState(false);
-  const [Errors, SetErrors] = useState([]);
-
+  const [error,Seterror]=useState(false)
   const [open, setOpen] = React.useState(false);
 
   function handleDrawerOpen() {
@@ -244,6 +229,10 @@ function App() {
   function handleDrawerClose() {
     setOpen(false);
   }
+
+  const handleClose = () => {
+    Seterror(false)
+  };
 
   useEffect(() => {
     SetLoading(true);
@@ -259,9 +248,10 @@ function App() {
       })
       .catch(err => {
         SetLoading(false);
-        SetErrors(err);
+        Seterror(true)
       });
   }, []);
+
 
   let GithubData;
   if (Repos === null || Loading) {
@@ -278,11 +268,11 @@ function App() {
     );
   } else {
     GithubData = <Github Repo={Repos} />;
-    console.log(Repos);
   }
 
   return (
     <React.Fragment>
+           <Hidden smDown>
       <ScrollspyNav
         scrollTargetIds={[
           "aboutme",
@@ -296,8 +286,7 @@ function App() {
         offset={-50}
       >
         <div>
-          <Hidden smDown>
-            <AppBar position="fixed" dense className={classes.root}>
+            <AppBar position="fixed"  color="inherit" className={classes.root}>
               <Container>
                 <Toolbar>
                   <Typography variant="h6" className={classes.title}>
@@ -365,10 +354,25 @@ function App() {
                 </Toolbar>
               </Container>
             </AppBar>
-          </Hidden>
+        </div>
+      </ScrollspyNav>
+      </Hidden>
 
-          <Hidden mdUp>
-            <div>
+
+      <Hidden mdUp>
+      <ScrollspyNav
+        scrollTargetIds={[
+          "aboutme",
+          "skills",
+          "experience",
+          "hobbies",
+          "languages",
+          "github",
+          "projects"
+        ]}
+        offset={-50}
+      >
+              <div>
               <CssBaseline />
               <AppBar
                 position="fixed"
@@ -415,61 +419,68 @@ function App() {
                   align="right"
                   href="#aboutme"
                 >
-                <AccountCircleIcon fontSize="large"/>
+                <AccountCircleIcon fontSize="default"/>
                 
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#experience"
                 >
-                <WorkIcon fontSize="large"/> 
+                <WorkIcon fontSize="default"/> 
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#skills"
                 >
-                  <DeveloperModeIcon fontSize="large"/>
-              <Divider light/>
+                  <DeveloperModeIcon fontSize="default"/>
+             
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#github"
                 >
-                <GitHubIcon fontSize="large"/>
+                <GitHubIcon fontSize="default"/>
              
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#languages"
                 >
-                   <LanguageIcon fontSize="large"/>
+                   <LanguageIcon fontSize="default"/>
         
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#hobbies"
                 >
-                 <FavoriteIcon fontSize="large"/>
+                 <FavoriteIcon fontSize="default"/>
                 </Button>
+                <Divider light/>
                 <Button
                   color="inherit"
                   className={classes.navbtn}
                   href="#contact"
                 >
-              <LocationOnIcon fontSize="large"/>
+              <LocationOnIcon fontSize="default"/>
             
                 </Button>
               </Drawer>
             </div>
-          </Hidden>
-        </div>
       </ScrollspyNav>
+      </Hidden>
 
+
+      
       {/* body */}
       <div className={classes.rootbody}>
         {/* Profile header*/}
@@ -506,7 +517,22 @@ function App() {
         <section id="contact" className={classes.Contactus}>
           <Contactus />
         </section>
+
+        <section id="contact" className={classes.Footer}>
+          <Footer />
+        </section>
       </div>
+
+      <Snackbar
+         anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        key={'msg'}
+        open={error}
+        onClose={handleClose}
+        message="Error while loading..."
+      />
     </React.Fragment>
   );
 }

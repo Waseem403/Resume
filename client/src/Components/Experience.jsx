@@ -6,7 +6,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
-import StarIcon from "@material-ui/icons/Star";
 import { Typography } from "@material-ui/core";
 
 export default function Experience() {
@@ -30,6 +29,7 @@ export default function Experience() {
             I have 1.5 years of work experience as junior web developer.
             Currently working at LRN, Work mostly on front end technologies
           </p>
+
           <ul>
             <li>
               JavaScript,Ajax,Json,XML,Redux,Fetch Api,Axios Api.
@@ -61,7 +61,7 @@ export default function Experience() {
            <p>
             I had completed my full stack development course from NIIT(dadar).
            </p>
-          <p>
+    
             <ul>
               <li>
                 <strong>Degree</strong>: Post graduation diploma
@@ -80,7 +80,7 @@ export default function Experience() {
                  <strong>IAAS Platforms </strong> : Heroku, Google App Engine.
                </li>
             </ul>
-          </p>
+
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"

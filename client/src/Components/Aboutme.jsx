@@ -69,10 +69,10 @@ export default function Aboutme() {
             </h3>
 
             <Button variant="contained" color="primary"  disableElevation >
-              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=ceae28d0-d83c-4940-91e7-8b3ade41abc3" target="_blank" download className={classes.downloadbtn}>Resume download</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=ceae28d0-d83c-4940-91e7-8b3ade41abc3" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
             </Button>
             <Button variant="contained" color="primary" className={classes.marginbtn} disableElevation>
-             <a href="mailto:b.waseem.403@gmail.com" className={classes.downloadbtn}> hire Me !</a>
+             <a href="mailto:b.waseem.403@gmail.com" rel="noopener" className={classes.downloadbtn}> hire Me !</a>
             </Button>
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} align="center">
@@ -84,8 +84,8 @@ export default function Aboutme() {
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://wa.me/9966599303/?text=urlencodedtext"  target="_blank"
+              size="medium"
+              href="https://wa.me/919966599303/?text=urlencodedtext"  target="_blank" rel="noopener"
               
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
@@ -93,36 +93,36 @@ export default function Aboutme() {
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://twitter.com/Wsm403?ref_src=twsrc%5Etfw" 
+              size="medium"
+              href="https://twitter.com/Wsm403?ref_src=twsrc%5Etfw"  rel="noopener"
               target="_blank"
             >
-              <i class="fab fa-twitter" style={{ color: "#2196f3" }}></i>
+              <i className="fab fa-twitter" style={{ color: "#2196f3" }}></i>
             </IconButton>
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://github.com/Waseem403"
+              size="medium"
+              href="https://github.com/Waseem403" rel="noopener"
               target="_blank"
             >
-              <i class="fab fa-github" style={{ color: "black" }}></i>
+              <i className="fab fa-github" style={{ color: "black" }}></i>
             </IconButton>
                       <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://www.linkedin.com/in/waseem-shaikh-4a0461153"
+              size="medium"
+              href="https://www.linkedin.com/in/waseem-shaikh-4a0461153" rel="noopener"
               target="_blank"
             >
-              <i class="fab fa-linkedin-in" style={{ color: "#0e76a8" }}></i>
+              <i className="fab fa-linkedin-in" style={{ color: "#0e76a8" }}></i>
             </IconButton>
          
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="mailto:b.waseem.403@gmail.com"
+              size="medium"
+              href="mailto:b.waseem.403@gmail.com" rel="noopener"
             >
              <EmailIcon style={{color:"#B23121"}}/>
             </IconButton>
@@ -148,44 +148,44 @@ export default function Aboutme() {
         <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://wa.me/9966599303/?text=urlencodedtext"  target="_blank"
+              size="medium"
+              href="https://wa.me/919966599303/?text=urlencodedtext" rel="noopener" target="_blank"
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
             </IconButton>
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://twitter.com/Wsm403?ref_src=twsrc%5Etfw" 
+              size="medium"
+              href="https://twitter.com/Wsm403?ref_src=twsrc%5Etfw" rel="noopener"
               target="_blank"
             >
-              <i class="fab fa-twitter" style={{ color: "#2196f3" }}></i>
+              <i className="fab fa-twitter" style={{ color: "#2196f3" }}></i>
             </IconButton>
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://github.com/Waseem403"
+              size="medium"
+              href="https://github.com/Waseem403" rel="noopener noreferrer"
               target="_blank"
             >
-              <i class="fab fa-github" style={{ color: "black" }}></i>
+              <i className="fab fa-github" style={{ color: "black" }}></i>
             </IconButton>
                       <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="https://www.linkedin.com/in/waseem-shaikh-4a0461153"
+              size="medium"
+              href="https://www.linkedin.com/in/waseem-shaikh-4a0461153" rel="noopener"
               target="_blank"
             >
-              <i class="fab fa-linkedin-in" style={{ color: "#0e76a8" }}></i>
+              <i className="fab fa-linkedin-in" style={{ color: "#0e76a8" }}></i>
             </IconButton>
          
             <IconButton
               aria-label="delete"
               className={classes.margin}
-              size="large"
-              href="mailto:b.waseem.403@gmail.com"
+              size="medium"
+              href="mailto:b.waseem.403@gmail.com" rel="noopener"
             >
              <EmailIcon style={{color:"#B23121"}}/>
             </IconButton>
@@ -216,10 +216,10 @@ export default function Aboutme() {
             </h3>
 
             <Button variant="contained" color="primary"  disableElevation >
-              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=ceae28d0-d83c-4940-91e7-8b3ade41abc3" target="_blank" download className={classes.downloadbtn}>Resume download</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=ceae28d0-d83c-4940-91e7-8b3ade41abc3" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
             </Button>
             <Button variant="contained" color="primary" className={classes.marginbtn} disableElevation>
-             <a href="mailto:b.waseem.403@gmail.com" className={classes.downloadbtn}> hire Me !</a>
+             <a href="mailto:b.waseem.403@gmail.com" rel="noopener" className={classes.downloadbtn}> hire Me !</a>
             </Button>
           </Grid>
           </Grid>

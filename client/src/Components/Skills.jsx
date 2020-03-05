@@ -110,7 +110,7 @@ function Skills() {
             <Card className={classes.root} onMouseEnter={Fronthandlechange}>
               <CardContent>
                 <Avatar alt="Remy Sharp" className={classes.front}>
-                  <i class="fab fa-html5 fa-3x"></i>
+                  <i className="fab fa-html5 fa-3x"></i>
                 </Avatar>
                 <Typography
                   variant="h5"
@@ -154,7 +154,7 @@ function Skills() {
             <Card className={classes.root} onMouseEnter={Serverhandlechange}>
               <CardContent>
                 <Avatar alt="Remy Sharp" className={classes.server}>
-                  <i class="fab fa-node-js fa-3x"></i>
+                  <i className="fab fa-node-js fa-3x"></i>
                 </Avatar>
                 <Typography
                   variant="h5"
@@ -199,7 +199,7 @@ function Skills() {
             <Card className={classes.root} onMouseEnter={IAShandlechange}>
               <CardContent>
                 <Avatar alt="Remy Sharp" className={classes.ias}>
-                  <i class="fas fa-server fa-3x"></i>
+                  <i className="fas fa-server fa-3x"></i>
                 </Avatar>
                 <Typography
                   variant="h5"
@@ -243,7 +243,7 @@ function Skills() {
             <Card className={classes.root} onMouseEnter={DEVhandlechange}>
               <CardContent>
                 <Avatar alt="Remy Sharp" className={classes.dev}>
-                  <i class="fab fa-npm fa-3x"></i>
+                  <i className="fab fa-npm fa-3x"></i>
                 </Avatar>
                 <Typography
                   variant="h5"

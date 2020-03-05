@@ -3,12 +3,10 @@ import Grid from "@material-ui/core/Grid";
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Progress from "react-circle-progress-bar";
 import ReactCardFlip from 'react-card-flip';
 
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Avatar from "@material-ui/core/Avatar";
 import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
 import SchoolIcon from '@material-ui/icons/School';
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';

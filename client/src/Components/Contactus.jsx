@@ -1,10 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Snackbar from '@material-ui/core/Snackbar';
 
 import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
-import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -13,6 +12,7 @@ import MuiPhoneNumber from "material-ui-phone-number";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import EmailIcon from '@material-ui/icons/Email';
+const axios = require('axios');
 
 const useStyles = makeStyles(theme => ({
   margin: {
@@ -38,7 +38,8 @@ export default function Aboutme() {
   const [Email, SetEmail] = useState("");
   const [Mobile, SetMobile] = useState(null);
   const [Message, SetMessage] = useState("");
-  const [Errors, SetErrors] = useState("");
+  const [open, setOpen] = useState(false);
+  const [Output_msg,SetOutput_msg]=useState('')
 
   const handleEmail = e => {
     SetEmail(e.target.value);
@@ -52,6 +53,10 @@ export default function Aboutme() {
     SetMessage(e.target.value);
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const OnSubmit = e => {
     e.preventDefault();
     const UserMessage = {
@@ -59,11 +64,32 @@ export default function Aboutme() {
       Mobile,
       Message
     };
-   console.log(UserMessage)
+    setOpen(true)
+
+    axios.post("/contactus",UserMessage).then(res=>{
+      setOpen(true)
+      SetOutput_msg("Thanks for email!. we will get back you soon.")
+    })
+    .catch(err=>{
+      setOpen(true)
+      SetOutput_msg("Error! Please try again later.")
+    })
   };
 
   return (
+
     <React.Fragment>
+         <Snackbar
+         anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        key={'errormsg'}
+        open={open}
+        onClose={handleClose}
+        message={Output_msg}
+        autoHideDuration={3000}
+      />
       <Container maxWidth="lg">
         <Typography
           variant="h4"

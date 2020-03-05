@@ -1,5 +1,9 @@
 const express=require('express')
 const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
+
+
 
 //init express app
 const app=express()
@@ -15,12 +19,48 @@ app.use(bodyParser.json());
 //route whicha accept contact details of the send user
 app.post("/contactus",(req,res)=>{
   
-    const username=req.body.Email.slice(1,6);
+    const arr=req.body.Email.split("@");
+    const User_Name=arr[0]
     const User_Email=req.body.Email
-    const User_Phone=req.body.Phone
+    const User_Phone=req.body.Mobile
     const User_Message=req.body.Message
+      
+    res.status(400).send("hello")
 
-
+    console.log("1")
+    //init email
+  
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'codefunzz@gmail.com',
+        pass: '9966599303'
+      }
+    });
+    
+    var mailOptions = {
+      from: User_Email,
+      to: 'b.waseem.403@gmail.com',
+      subject: `Email from Online Portfolio`,
+      text: `Hi Sir
+          
+          My name is ${User_Name} and i have the following query(or) requirement.
+          
+           ${User_Message}
+       
+           Thanks & Regards
+            ${User_Name}
+            ${User_Phone}
+         `
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        res.send('Email sent: ' + info.response);
+      }
+    });
 })
 
 
