@@ -141,8 +141,8 @@ const useStyles = makeStyles(theme => ({
   },
   Footer: {
     margin: "auto",
-    backgroundColor: "#e0e0e0",
-    color: "#212121",
+    backgroundColor: "#212121",
+    color: "#fff",
     display: "flex",
     flexDirection: "column",
     paddingTop: theme.spacing(2),

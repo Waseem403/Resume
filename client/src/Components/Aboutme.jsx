@@ -26,6 +26,11 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(35),
     alignItems: "center"
   },
+  medium:{
+    width: theme.spacing(25),
+    height: theme.spacing(25),
+    alignItems: "center"
+  },
   downloadbtn:{
     color:"#fff",
     textDecoration:"none",
@@ -85,7 +90,7 @@ export default function Aboutme() {
               aria-label="delete"
               className={classes.margin}
               size="medium"
-              href="https://wa.me/919966599303/?text=urlencodedtext"  target="_blank" rel="noopener"
+              href="https://wa.me/919966599303/?text=Hi Waseem!"  target="_blank" rel="noopener"
               
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
@@ -141,15 +146,15 @@ export default function Aboutme() {
         <Grid container spacing={2} align="center">
         <Grid item xs={12} sm={12} md={12} lg={12} >
             <Avatar
-              alt="Remy Sharp"
+              alt="not found"
               src={waseem}
-              className={classes.large}
+              className={classes.medium}
             />
         <IconButton
               aria-label="delete"
               className={classes.margin}
               size="medium"
-              href="https://wa.me/919966599303/?text=urlencodedtext" rel="noopener" target="_blank"
+              href="https://wa.me/919966599303/?text=Hi Waseem!" rel="noopener" target="_blank"
             >
               <WhatsAppIcon style={{color:"#25D366"}}/>
             </IconButton>

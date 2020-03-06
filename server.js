@@ -25,11 +25,10 @@ app.post("/contactus",(req,res)=>{
     const User_Phone=req.body.Mobile
     const User_Message=req.body.Message
       
-    res.status(400).send("hello")
+ 
 
-    console.log("1")
+   
     //init email
-  
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {

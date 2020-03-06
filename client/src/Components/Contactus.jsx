@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -29,8 +31,15 @@ const useStyles = makeStyles(theme => ({
   links:{
     textDecoration:"none",
     lineHeight:2,
-  }
+  },
+  
 }));
+
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 
 export default function Aboutme() {
   const classes = useStyles();
@@ -40,6 +49,9 @@ export default function Aboutme() {
   const [Message, SetMessage] = useState("");
   const [open, setOpen] = useState(false);
   const [Output_msg,SetOutput_msg]=useState('')
+  const [Sever,SetSever]=useState('')
+  const [Loader,SetLoader]=useState(false)
+
 
   const handleEmail = e => {
     SetEmail(e.target.value);
@@ -64,32 +76,45 @@ export default function Aboutme() {
       Mobile,
       Message
     };
-    setOpen(true)
-
+    SetLoader(true)
     axios.post("/contactus",UserMessage).then(res=>{
+      SetOutput_msg("Thanks for contacting us!. we will get back to you soon.")
+      SetSever("success")
       setOpen(true)
-      SetOutput_msg("Thanks for email!. we will get back you soon.")
+      SetLoader(false)
+      SetEmail('')
+      SetMobile(null)
+      SetMessage('')
     })
     .catch(err=>{
-      setOpen(true)
       SetOutput_msg("Error! Please try again later.")
+      SetSever("error")
+      setOpen(true)
+      SetLoader(false)
+      SetEmail('')
+      SetMobile(null)
+      SetMessage('')
     })
   };
 
-  return (
 
+  const Loading=Loader===true?<React.Fragment><CircularProgress disableShrink size={15}/> sending...</React.Fragment>: "send message"
+
+  return (
     <React.Fragment>
-         <Snackbar
-         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        key={'errormsg'}
-        open={open}
-        onClose={handleClose}
-        message={Output_msg}
-        autoHideDuration={3000}
-      />
+           <Snackbar 
+             anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+           open={open} 
+           autoHideDuration={6000} 
+           onClose={handleClose}
+           >
+        <Alert onClose={handleClose} severity={Sever}>
+          {Output_msg}
+        </Alert>
+      </Snackbar>
       <Container maxWidth="lg">
         <Typography
           variant="h4"
@@ -101,7 +126,7 @@ export default function Aboutme() {
         </Typography>
         <Grid container spacing={2} className={classes.margin}>
           <Grid item xs={12} sm={12} md={4} lg={4}>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               Contact Details
             </Typography>
             <address>
@@ -169,9 +194,10 @@ export default function Aboutme() {
                     color="primary"
                     disableElevation
                     className={classes.messagebtn}
+                    disabled={Loader}
                   >
                     {" "}
-                    send message{" "}
+                    {Loading}
                   </Button>{" "}
                 </Grid>
               </Grid>
