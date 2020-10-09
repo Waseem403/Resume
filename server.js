@@ -1,7 +1,6 @@
 const express=require('express')
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-var smtpTransport = require("nodemailer-smtp-transport");
 
 
 
@@ -55,7 +54,7 @@ app.post("/contactus",(req,res)=>{
     
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
-        console.log(error);
+        res.send(error)
       } else {
         res.send('Email sent: ' + info.response);
       }
