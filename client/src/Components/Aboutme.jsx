@@ -74,7 +74,7 @@ export default function Aboutme() {
             </h3>
 
             <Button variant="contained" color="primary"  disableElevation >
-              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=ceae28d0-d83c-4940-91e7-8b3ade41abc3" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=09334020-ffd4-4e6c-b9d9-0de95c76edd9" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
             </Button>
             <Button variant="contained" color="primary" className={classes.marginbtn} disableElevation>
              <a href="mailto:b.waseem.403@gmail.com" rel="noopener" className={classes.downloadbtn}> hire Me !</a>

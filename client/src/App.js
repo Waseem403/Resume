@@ -258,7 +258,7 @@ function App() {
     GithubData = (
       <Backdrop className={classes.backdrop} open={Loading}>
         <Loader
-          type="BallTriangle"
+          type="ThreeDots"
           color="#FFF"
           height={250}
           width={250}
