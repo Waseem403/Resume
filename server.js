@@ -40,10 +40,10 @@ app.post("/contactus",(req,res)=>{
     var mailOptions = {
       from: User_Email,
       to: 'b.waseem.403@gmail.com',
-      subject: `Email from Online Portfolio`,
+      subject: `Contacted by recruiter`,
       text: `Hi Sir
           
-          My name is ${User_Name} and i have the following query(or) requirement.
+          My name is ${User_Name} and i have the following query (or) requirement.
           
            ${User_Message}
        
