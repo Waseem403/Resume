@@ -31,8 +31,8 @@ app.post("/contactus",(req,res)=>{
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'codefunzz@gmail.com',
-        pass: '9966599303'
+        user: 'b.waseem.403@gmail.com',
+        pass: '9966599403'
       }
     });
     
