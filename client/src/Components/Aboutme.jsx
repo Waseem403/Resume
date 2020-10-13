@@ -54,7 +54,7 @@ export default function Aboutme() {
               B waseem basha
             </Typography>
             <h2>
-              junior web developer
+              Junior Front End Developer(Production support) & FreeLancer.
             </h2>
             <h3>
               Developer  with a
@@ -69,8 +69,7 @@ export default function Aboutme() {
               Development from NIIT instuite of india.
             </h3>
             <h3>
-              <strong>My favourite stack</strong> : Javascript, ReactJS, Node js, with
-              continuous integration on Gitlab.
+              <strong>My favourite stack</strong> : Javascript, ReactJS, Node js,React Native.
             </h3>
 
             <Button variant="contained" color="primary"  disableElevation >

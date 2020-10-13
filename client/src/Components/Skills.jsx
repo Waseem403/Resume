@@ -167,6 +167,8 @@ function Skills() {
                 <p> Node js, Express js,Rest Apis </p>
                 <p>JWT Tokens,Passport Js,Thirs party API's</p>
                 <p>MongoDB,Ms sql,Firebase,Google API's </p>
+                     <p>React Native</p>
+
               </CardContent>
             </Card>
 
@@ -252,7 +254,7 @@ function Skills() {
                 >
                   Dev Tools
                 </Typography>
-                <p>NPM,GIT,Github,Postman,</p>
+                <p>NPM,GIT,Github,Postman,Expo CLI</p>
                 <p>React dev tool,Redux dev tool.</p>
                 <p>Vscode,NetBeans,Eclipse.</p>
               </CardContent>
