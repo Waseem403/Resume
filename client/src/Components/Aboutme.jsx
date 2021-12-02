@@ -54,7 +54,7 @@ export default function Aboutme() {
               B waseem basha
             </Typography>
             <h2>
-              Junior Front End Developer(Production support) & FreeLancer.
+              Junior Front End Developer & FreeLancer.
             </h2>
             <h3>
               Developer  with a
@@ -73,7 +73,7 @@ export default function Aboutme() {
             </h3>
 
             <Button variant="contained" color="primary"  disableElevation >
-              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/WaseemResume.pdf?alt=media&token=09334020-ffd4-4e6c-b9d9-0de95c76edd9" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/userprofile-94657.appspot.com/o/Waseem_Resume-updated.pdf?alt=media&token=a4bf2dff-121d-4df9-aea4-7a6b4f7e8d01" target="_blank" rel="noopener noreferrer" download className={classes.downloadbtn}>Resume download</a>
             </Button>
             <Button variant="contained" color="primary" className={classes.marginbtn} disableElevation>
              <a href="mailto:b.waseem.403@gmail.com" rel="noopener" className={classes.downloadbtn}> hire Me !</a>

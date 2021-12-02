@@ -15,6 +15,54 @@ export default function Experience() {
         Work experience & Education
       </Typography>
       <VerticalTimeline>
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="Sept 2018 - present"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          icon={<WorkIcon />}
+        >
+          <h2 className="vertical-timeline-element-title">Cognizant Technology Solutions</h2>
+          <h4 className="vertical-timeline-element-subtitle">
+            Programmer Analyst - January 2021 to till date
+          </h4>
+          <p>
+            Below are my roles & Responsibilities
+          </p>
+
+          <ul>
+            <li>
+            Responsible for maintaining and developing the front end application.
+            </li>
+            <li>
+            Responsible for implementing user stories as per the business requirements.
+            </li>
+            <li>
+            Responsible for fixing issues and bugs raised by QA team.
+            </li>
+            <li>
+            Handling the IVR(interactive voice response) module.
+            </li>
+            <li>
+              Monitoring the production logs and fixing the issues for better user experience.
+            </li>
+            <li>
+              Work with CTI(call transfer interface) team. Integrate and merge the latest code 
+              into our application for stable release.
+            </li>
+            <li>
+             Ensuring to write good quality and reusable code to avoid bugs and issues.
+            </li>
+            <li>
+            Closely collaborated with project members to identify and quickly address problems.
+            </li>
+            <li>
+            Responsible for unit testing and debugging.
+            </li>
+            <li>
+            Provide the daily updates to project managers and stakeholders.
+            </li>
+          </ul>
+        </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="Sept 2018 - present"
@@ -23,10 +71,10 @@ export default function Experience() {
         >
           <h2 className="vertical-timeline-element-title">LRN Co-opertion</h2>
           <h4 className="vertical-timeline-element-subtitle">
-            Junior Web Developer
+            Junior Web Developer - September 2019 to January 2021
           </h4>
           <p>
-            I have 1.5 years of work experience as junior web developer.
+            I have 2.5 years of work experience as junior web developer.
             Currently working at LRN, Work mostly on front end technologies
           </p>
 
