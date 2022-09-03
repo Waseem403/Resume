@@ -21,7 +21,7 @@ export default function Experience() {
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<WorkIcon />}
         >
-          <h2 className="vertical-timeline-element-title">Cognizant Technology Solutions</h2>
+          <h2 className="vertical-timeline-element-title">Verizon Data Solutions India</h2>
           <h4 className="vertical-timeline-element-subtitle">
             Senior software-dev(level-3) - May 2021 to till date
           </h4>
