@@ -54,7 +54,7 @@ export default function Aboutme() {
               B waseem basha
             </Typography>
             <h2>
-              Junior Front End Developer & FreeLancer.
+              Senior Software Developer & FreeLancer.
             </h2>
             <h3>
               Developer  with a
