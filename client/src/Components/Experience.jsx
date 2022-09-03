@@ -23,7 +23,55 @@ export default function Experience() {
         >
           <h2 className="vertical-timeline-element-title">Cognizant Technology Solutions</h2>
           <h4 className="vertical-timeline-element-subtitle">
-            Programmer Analyst - January 2021 to till date
+            Senior software-dev(level-3) - May 2021 to till date
+          </h4>
+          <p>
+            Below are my roles & Responsibilities
+          </p>
+
+          <ul>
+            <li>
+            Responsible for maintaining and developing the front end application.
+            </li>
+            <li>
+            Responsible for implementing user stories as per the business requirements.
+            </li>
+            <li>
+            Responsible for fixing issues and bugs raised by QA team.
+            </li>
+            <li>
+            Handling the IVR(interactive voice response) module.
+            </li>
+            <li>
+              Monitoring the production logs and fixing the issues for better user experience.
+            </li>
+            <li>
+              Work with CTI(call transfer interface) team. Integrate and merge the latest code 
+              into our application for stable release.
+            </li>
+            <li>
+             Ensuring to write good quality and reusable code to avoid bugs and issues.
+            </li>
+            <li>
+            Closely collaborated with project members to identify and quickly address problems.
+            </li>
+            <li>
+            Responsible for unit testing and debugging.
+            </li>
+            <li>
+            Provide the daily updates to project managers and stakeholders.
+            </li>
+          </ul>
+        </VerticalTimelineElement>
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="Sept 2018 - present"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          icon={<WorkIcon />}
+        >
+          <h2 className="vertical-timeline-element-title">Cognizant Technology Solutions</h2>
+          <h4 className="vertical-timeline-element-subtitle">
+            Programmer Analyst - January 2021 to April 2022
           </h4>
           <p>
             Below are my roles & Responsibilities
@@ -208,7 +256,7 @@ export default function Experience() {
           <h4 className="vertical-timeline-element-subtitle">
             Secondary school certificate
           </h4>
-          <p>SI had completed my SSC in the year 2010 with 56%</p>
+          <p>I had completed my SSC in the year 2010 with 56%</p>
           <ul>
               <li>
                 <strong>Degree</strong> : Secondary school certificate
