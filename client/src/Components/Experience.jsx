@@ -17,13 +17,13 @@ export default function Experience() {
       <VerticalTimeline>
       <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Sept 2018 - present"
+          date="May 2022 - present"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<WorkIcon />}
         >
-          <h2 className="vertical-timeline-element-title">Cognizant Technology Solutions</h2>
+          <h2 className="vertical-timeline-element-title">Verizon Data Solutions India</h2>
           <h4 className="vertical-timeline-element-subtitle">
-            Senior software-dev(level-3) - May 2021 to till date
+            Senior software-dev(level-3) - May 2022 to present
           </h4>
           <p>
             Below are my roles & Responsibilities
@@ -65,7 +65,7 @@ export default function Experience() {
         </VerticalTimelineElement>
       <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Sept 2018 - present"
+          date="January 2021 - April 2022"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<WorkIcon />}
         >
@@ -113,13 +113,13 @@ export default function Experience() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Sept 2018 - present"
+          date="September 2018 - January 2021"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <h2 className="vertical-timeline-element-title">LRN Co-opertion</h2>
           <h4 className="vertical-timeline-element-subtitle">
-            Junior Web Developer - September 2019 to January 2021
+            Junior Web Developer - September 2018 to January 2021
           </h4>
           <p>
             I have 2.5 years of work experience as junior web developer.
